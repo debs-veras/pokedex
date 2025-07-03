@@ -15,7 +15,7 @@ export const PokemonBackground = () => {
 
   useEffect(() => {
     const generateStars = () => {
-      const starCount = window.innerWidth < 768 ? 100 : 200; // Menos estrelas em mobile
+      const starCount = window.innerWidth < 768 ? 100 : 200; 
       const newStars = Array.from({ length: starCount }).map(() => ({
         x: Math.random() * 100,
         y: Math.random() * 100,
@@ -23,7 +23,7 @@ export const PokemonBackground = () => {
         opacity: Math.random() * 0.7 + 0.3,
         delay: Math.random() * 10,
         duration: Math.random() * 5 + 3,
-        twinkle: Math.random() > 0.3 // 70% das estrelas piscam
+        twinkle: Math.random() > 0.3 
       }));
       setStars(newStars);
     };

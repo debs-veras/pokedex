@@ -23,11 +23,3 @@ export const getPokemonAbility = async (data: string) => {
   return await getRequest(`ability/${data}/`);
 };
 
-// Adicione no seu arquivo pokemon.Request.ts
-export async function getPokemonSpecies(name: string) {
-  return await fetch(`https://pokeapi.co/api/v2/pokemon-species/${name}`).then((res) => res.json());
-}
-
-export async function getEvolutionChain(url: string) {
-  return await fetch(url).then((res) => res.json());
-}

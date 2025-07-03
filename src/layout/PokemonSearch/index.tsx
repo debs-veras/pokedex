@@ -11,7 +11,6 @@ import { PokemonCard } from "../../components/PokemonCard";
 import Modal from "../Modal";
 import {
   getAllPokemon,
-  // getPokemonAbility,
   getPokemonNameOrId,
   getPokemonType,
 } from "../../services/pokemon.Request";
@@ -52,31 +51,7 @@ export default function PokemonSearch() {
   const [showTypeFilter, setShowTypeFilter] = useState(false);
   const limit: number = 12;
 
-  // const fetchAbilities = async (abilities: any[]) => {
-  //   const abilityPromises = abilities.map(async (a: any) => {
-  //     try {
-  //       const data = await getPokemonAbility(a.ability.name);
-  //       const englishEntry = data.flavor_text_entries?.find(
-  //         (entry: any) => entry.language.name === "en"
-  //       );
-  //       return {
-  //         name: a.ability.name,
-  //         isHidden: a.is_hidden,
-  //         description: englishEntry?.flavor_text || "No description available",
-  //       };
-  //     } catch (error) {
-  //       return {
-  //         name: a.ability.name,
-  //         isHidden: a.is_hidden,
-  //         description: "Description not available",
-  //       };
-  //     }
-  //   });
-  //   return Promise.all(abilityPromises);
-  // };
-
   const formatPokemonData = async (data: any): Promise<Pokemon> => {
-    // const abilities = await fetchAbilities(data.abilities);
     return {
       id: data.id,
       name: data.name,
