@@ -1,5 +1,6 @@
 import { GiCrossedSwords, GiHeartPlus, GiShield } from "react-icons/gi";
-import type { Pokemon } from "../types/pokemon.d";
+import { Pokemon } from "../../types/pokemon.d";
+
 
 export function PokemonCard({
   pokemon,
